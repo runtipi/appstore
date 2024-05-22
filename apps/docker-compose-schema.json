@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "internalPort": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 65565
+          },
+          "isMain": {
+            "type": "boolean"
+          },
+          "volumes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "hostPath": {
+                  "type": "string"
+                },
+                "containerPath": {
+                  "type": "string"
+                }
+              },
+              "required": ["hostPath", "containerPath"]
+            }
+          },
+          "environment": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          },
+          "exposedLocal": {
+            "type": "boolean"
+          },
+          "exposed": {
+            "type": "boolean"
+          },
+          "openPort": {
+            "type": "boolean"
+          },
+          "healthcheck": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "test": {
+                "type": "string"
+              },
+              "interval": {
+                "type": "string"
+              },
+              "timeout": {
+                "type": "string"
+              },
+              "retries": {
+                "type": "number"
+              }
+            },
+            "required": ["test", "interval", "timeout", "retries"]
+          },
+          "dependsOn": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "condition": {
+                  "type": "string",
+                  "oneOf": [
+                    {
+                      "enum": [
+                        "service_healthy",
+                        "service_started",
+                        "service_completed_successfully"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "command": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["name", "image"]
+    }
+  },
+  "required": ["$schema", "services"]
+}
