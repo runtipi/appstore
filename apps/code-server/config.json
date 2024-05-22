@@ -1,0 +1,17 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Code Server",
+  "id": "code-server",
+  "available": true,
+  "short_desc": "VS Code in the browser",
+  "author": "coder",
+  "port": 8001,
+  "categories": ["development"],
+  "description": "Run VS Code on any machine anywhere and access it in the browser.",
+  "tipi_version": 1,
+  "version": "4.89.1",
+  "source": "https://github.com/coder/code-server",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "dynamic_config": true
+}

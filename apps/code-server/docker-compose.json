@@ -1,0 +1,27 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "code-server",
+      "image": "linuxserver/code-server:4.89.1",
+      "internalPort": 8443,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/config",
+          "hostPath": "${APP_DATA_DIR}/data/config"
+        },
+        {
+          "containerPath": "/projects",
+          "hostPath": "${APP_DATA_DIR}/data/projects"
+        }
+      ],
+      "environment": {
+        "PASSWORD": "${CODE_SERVER_PASSWORD}",
+        "SUDO_PASSWORD": "${CODE_SERVER_SUDO_PASSWORD}",
+        "DEFAULT_WORKSPACE": "/projects",
+        "TZ": "${TZ}"
+      }
+    }
+  ]
+}
