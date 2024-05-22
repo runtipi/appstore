@@ -1,0 +1,37 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "filebrowser",
+      "image": "filebrowser/filebrowser:v2.30.0-s6",
+      "internalPort": 8080,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/database",
+          "hostPath": "${APP_DATA_DIR}/data/database"
+        },
+        {
+          "containerPath": "/config",
+          "hostPath": "${APP_DATA_DIR}/data/config"
+        },
+        {
+          "containerPath": "/srv/general",
+          "hostPath": "${APP_DATA_DIR}/data/general"
+        },
+        {
+          "containerPath": "/srv/media",
+          "hostPath": "${ROOT_FOLDER_HOST}/media"
+        },
+        {
+          "containerPath": "/srv/app-data",
+          "hostPath": "${ROOT_FOLDER_HOST}/app-data"
+        }
+      ],
+      "environment": {
+        "PUID": "0",
+        "PGID": "0"
+      }
+    }
+  ]
+}

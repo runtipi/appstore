@@ -13,11 +13,11 @@
         },
         {
           "containerPath": "/movies",
-          "hostPath": "${ROOT_FOLDER_HOST}/data/movies"
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/movies"
         },
         {
           "containerPath": "/tv",
-          "hostPath": "${ROOT_FOLDER_HOST}/data/tv"
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/tv"
         }
       ],
       "environment": {

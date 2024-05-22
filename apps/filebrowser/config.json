@@ -1,0 +1,18 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Filebrowser",
+  "id": "filebrowser",
+  "available": true,
+  "short_desc": "Web File Browser",
+  "author": "filebrowser",
+  "port": 8003,
+  "categories": ["data", "utilities"],
+  "description": "Filebrowser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files.",
+  "tipi_version": 1,
+  "version": "v2.30.0-s6",
+  "source": "https://github.com/filebrowser/filebrowser",
+  "website": "https://filebrowser.org",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "dynamic_config": true
+}
