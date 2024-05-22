@@ -3,7 +3,7 @@
   "name": "Code Server",
   "id": "code-server",
   "available": true,
-  "short_desc": "VS Code in the browser",
+  "short_desc": "VS Code in the browser.",
   "author": "coder",
   "port": 8001,
   "categories": ["development"],

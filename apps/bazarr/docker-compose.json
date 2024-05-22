@@ -1,0 +1,28 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "bazarr",
+      "image": "linuxserver/bazarr:1.4.2",
+      "internalPort": 6767,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/config",
+          "hostPath": "${APP_DATA_DIR}/data/config"
+        },
+        {
+          "containerPath": "/movies",
+          "hostPath": "${ROOT_FOLDER_HOST}/data/movies"
+        },
+        {
+          "containerPath": "/tv",
+          "hostPath": "${ROOT_FOLDER_HOST}/data/tv"
+        }
+      ],
+      "environment": {
+        "TZ": "${TZ}"
+      }
+    }
+  ]
+}
