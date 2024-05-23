@@ -23,6 +23,15 @@
             "minimum": 1,
             "maximum": 65565
           },
+          "addPorts": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
           "isMain": {
             "type": "boolean"
           },

@@ -2,12 +2,12 @@
 
 | App Name      | Added |
 | ------------- | ----- |
-| adguard       | no    |
+| adguard       | yes   |
 | bazarr        | yes   |
 | code-server   | yes   |
 | deluge        | no    |
 | filebrowser   | yes   |
-| glance        | no    |
+| glance        | yes   |
 | homarr        | no    |
 | homepage      | no    |
 | invidious     | no    |
@@ -44,8 +44,7 @@
 
 ```json
 "addPorts": [
-    8080:8080
-    60:60
+    "8080": ["8080","tcp","udp"]
 ]
 ```
 

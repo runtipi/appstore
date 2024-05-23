@@ -1,0 +1,16 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Adguard",
+  "id": "adguard",
+  "available": true,
+  "short_desc": "Network-wide ads & trackers blocking DNS server.",
+  "author": "AdguardTeam",
+  "port": 8005,
+  "categories": ["network"],
+  "description": "AdGuard Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.",
+  "tipi_version": 1,
+  "version": "v0.107.50",
+  "source": "https://github.com/AdguardTeam/AdGuardHome",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"]
+}

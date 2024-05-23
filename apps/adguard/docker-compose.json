@@ -1,0 +1,24 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "adguard",
+      "image": "adguard/adguardhome:v0.107.50",
+      "internalPort": 80,
+      "addPorts": {
+        "53": ["53", "tcp", "udp"]
+      },
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/opt/adguardhome/work",
+          "hostPath": "${APP_DATA_DIR}/data/work"
+        },
+        {
+          "containerPath": "/opt/adguardhome/conf",
+          "hostPath": "${APP_DATA_DIR}/data/conf"
+        }
+      ]
+    }
+  ]
+}
