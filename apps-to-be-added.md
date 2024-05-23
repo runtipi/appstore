@@ -37,3 +37,26 @@
 | wg-easy       | no    |
 | zerotier      | no    |
 | lodestone     | no    |
+
+### Required compose generation featurs missing from runtipi
+
+- Multiple ports
+
+```json
+"addPorts": [
+    8080:8080
+    60:60
+]
+```
+
+- Read only in volumes
+
+```json
+"volumes": [
+    {
+        "containerPath": "/hello",
+        "hostPath": "/hello",
+        "readOnly": true,
+    }
+]
+```

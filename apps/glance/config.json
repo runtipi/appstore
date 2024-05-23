@@ -1,0 +1,16 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Glance",
+  "id": "glance",
+  "available": true,
+  "short_desc": "What if you could see everything at a...",
+  "author": "glanceapp",
+  "port": 8004,
+  "categories": ["utilities"],
+  "description": "A self-hosted dashboard that puts all your feeds in one place.",
+  "tipi_version": 1,
+  "version": "v4.0.0",
+  "source": "https://github.com/glanceapp/glance",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"]
+}

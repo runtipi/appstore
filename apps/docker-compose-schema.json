@@ -37,6 +37,9 @@
                 },
                 "containerPath": {
                   "type": "string"
+                },
+                "readOnly": {
+                  "type": "boolean"
                 }
               },
               "required": ["hostPath", "containerPath"]
