@@ -30,10 +30,10 @@
               "additionalProperties": false,
               "properties": {
                 "containerPort": {
-                  "type": "string"
+                  "type": "number"
                 },
                 "hostPort": {
-                  "type": "string"
+                  "type": "number"
                 },
                 "udp": {
                   "type": "boolean"
@@ -42,7 +42,7 @@
                   "type": "boolean"
                 }
               },
-              "required": ["containerPort", "hostPort"]
+              "required": ["containerPort", "hostPort", "tcp", "udp"]
             }
           },
           "isMain": {

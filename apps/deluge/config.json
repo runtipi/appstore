@@ -1,0 +1,17 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Deluge",
+  "id": "deluge",
+  "available": true,
+  "short_desc": "Deluge BitTorrent client",
+  "author": "deluge-torrent",
+  "port": 8004,
+  "categories": ["utilities"],
+  "description": "Deluge is a BitTorrent client that utilizes a daemon/client model.",
+  "tipi_version": 1,
+  "version": "2.1.1",
+  "source": "https://github.com/deluge-torrent/deluge",
+  "website": "https://www.deluge-torrent.org/",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"]
+}

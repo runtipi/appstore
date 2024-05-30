@@ -7,8 +7,8 @@
       "internalPort": 80,
       "addPorts": [
         {
-          "containerPort": "53",
-          "hostPort": "53",
+          "containerPort": 53,
+          "hostPort": 53,
           "udp": true,
           "tcp": true
         }

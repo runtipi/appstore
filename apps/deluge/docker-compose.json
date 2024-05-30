@@ -1,0 +1,39 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "deluge",
+      "image": "linuxserver/deluge:2.1.1",
+      "internalPort": 8112,
+      "addPorts": [
+        {
+          "containerPort": 6881,
+          "hostPort": 6881,
+          "udp": true,
+          "tcp": true
+        },
+        {
+          "containerPort": 58846,
+          "hostPort": 58846,
+          "tcp": true,
+          "udp": false
+        }
+      ],
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/config",
+          "hostPath": "${APP_DATA_DIR}/data/config"
+        },
+        {
+          "containerPath": "/media/torrents",
+          "hostPath": "${ROOT_FOLDER_HOST}/media/torrents"
+        }
+      ],
+      "environment": {
+        "TZ": "${TZ}",
+        "DELUGE_LOGLEVEL": "error"
+      }
+    }
+  ]
+}

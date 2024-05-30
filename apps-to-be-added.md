@@ -5,7 +5,7 @@
 | adguard       | yes   |
 | bazarr        | yes   |
 | code-server   | yes   |
-| deluge        | no    |
+| deluge        | yes   |
 | filebrowser   | yes   |
 | glance        | yes   |
 | homarr        | no    |
