@@ -5,9 +5,14 @@
       "name": "adguard",
       "image": "adguard/adguardhome:v0.107.50",
       "internalPort": 80,
-      "addPorts": {
-        "53": ["53", "tcp", "udp"]
-      },
+      "addPorts": [
+        {
+          "containerPort": "53",
+          "hostPort": "53",
+          "udp": true,
+          "tcp": true
+        }
+      ],
       "isMain": true,
       "volumes": [
         {

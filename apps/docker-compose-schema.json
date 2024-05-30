@@ -24,12 +24,25 @@
             "maximum": 65565
           },
           "addPorts": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "containerPort": {
+                  "type": "string"
+                },
+                "hostPort": {
+                  "type": "string"
+                },
+                "udp": {
+                  "type": "boolean"
+                },
+                "tcp": {
+                  "type": "boolean"
+                }
+              },
+              "required": ["containerPort", "hostPort"]
             }
           },
           "isMain": {
