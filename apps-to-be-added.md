@@ -44,7 +44,12 @@
 
 ```json
 "addPorts": [
-    "8080": ["8080","tcp","udp"]
+    {
+        "containerPort": 80, // required
+        "hostPort": 80, // required
+        "tcp": true, // required
+        "udp": true // required
+    }
 ]
 ```
 
@@ -53,8 +58,8 @@
 ```json
 "volumes": [
     {
-        "containerPath": "/hello",
-        "hostPath": "/hello",
+        "containerPath": "/hello", // required
+        "hostPath": "/hello", // required
         "readOnly": true,
     }
 ]
