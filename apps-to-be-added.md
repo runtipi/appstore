@@ -8,7 +8,7 @@
 | deluge        | yes   |
 | filebrowser   | yes   |
 | glance        | yes   |
-| homarr        | no    |
+| homarr        | yes   |
 | homepage      | no    |
 | invidious     | no    |
 | it-tools      | no    |

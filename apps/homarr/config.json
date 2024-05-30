@@ -1,0 +1,17 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Homarr",
+  "id": "homarr",
+  "available": true,
+  "short_desc": "A simple, yet powerful dashboard for your server.",
+  "author": "ajnart",
+  "port": 8007,
+  "categories": ["utilities"],
+  "description": "Homarr is a simple, yet powerful dashboard for your server. It allows you to manage and monitor your server with ease.",
+  "tipi_version": 1,
+  "version": "0.15.3",
+  "source": "https://github.com/ajnart/homarr",
+  "website": "https://homarr.dev",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"]
+}

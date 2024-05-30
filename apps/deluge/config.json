@@ -3,7 +3,7 @@
   "name": "Deluge",
   "id": "deluge",
   "available": true,
-  "short_desc": "Deluge BitTorrent client",
+  "short_desc": "Deluge BitTorrent client.",
   "author": "deluge-torrent",
   "port": 8004,
   "categories": ["utilities"],
