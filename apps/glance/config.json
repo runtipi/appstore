@@ -9,7 +9,7 @@
   "categories": ["utilities"],
   "description": "A self-hosted dashboard that puts all your feeds in one place.",
   "tipi_version": 1,
-  "version": "v4.0.0",
+  "version": "v0.4.0",
   "source": "https://github.com/glanceapp/glance",
   "exposable": true,
   "supported_architectures": ["arm64", "amd64"]
