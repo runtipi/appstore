@@ -4,7 +4,7 @@
     {
       "name": "filebrowser",
       "image": "filebrowser/filebrowser:v2.30.0-s6",
-      "internalPort": 8080,
+      "internalPort": 80,
       "isMain": true,
       "volumes": [
         {
