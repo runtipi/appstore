@@ -5,7 +5,7 @@
   "available": true,
   "short_desc": "VS Code in the browser.",
   "author": "coder",
-  "port": 8003,
+  "port": 8532,
   "categories": ["development"],
   "description": "Run VS Code on any machine anywhere and access it in the browser.",
   "tipi_version": 1,

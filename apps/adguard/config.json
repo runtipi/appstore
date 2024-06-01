@@ -5,7 +5,7 @@
   "available": true,
   "short_desc": "Network-wide ads & trackers blocking DNS server.",
   "author": "AdguardTeam",
-  "port": 8001,
+  "port": 8567,
   "categories": ["network"],
   "description": "AdGuard Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.",
   "tipi_version": 1,

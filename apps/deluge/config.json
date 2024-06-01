@@ -5,7 +5,7 @@
   "available": true,
   "short_desc": "Deluge BitTorrent client.",
   "author": "deluge-torrent",
-  "port": 8004,
+  "port": 8878,
   "categories": ["utilities"],
   "description": "Deluge is a BitTorrent client that utilizes a daemon/client model.",
   "tipi_version": 1,

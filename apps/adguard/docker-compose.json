@@ -11,6 +11,12 @@
           "hostPort": 53,
           "udp": true,
           "tcp": true
+        },
+        {
+          "containerPort": 3000,
+          "hostPort": 8568,
+          "tcp": true,
+          "udp": false
         }
       ],
       "isMain": true,

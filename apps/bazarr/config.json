@@ -5,7 +5,7 @@
   "available": true,
   "short_desc": "Manage subtitles for Sonarr/Radarr.",
   "author": "morpheus65535",
-  "port": 8002,
+  "port": 8342,
   "categories": ["media", "utilities"],
   "description": "Bazarr is a companion application to Sonarr and Radarr. It manages and downloads subtitles based on your requirements.",
   "tipi_version": 1,

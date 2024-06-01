@@ -1,11 +1,3 @@
-&nbsp;
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="doc/adguard_home_darkmode.svg">
-    <img alt="AdGuard Home" src="doc/adguard_home_lightmode.svg" width="300px">
-  </picture>
-</p>
 <h3 align="center">Privacy protection center for you and your devices</h3>
 <p align="center">
   Free and open source, powerful network-wide ads & trackers blocking DNS server.
@@ -39,6 +31,8 @@
   <img src="https://cdn.adtidy.org/public/Adguard/Common/adguard_home.gif" width="800"/>
 </p>
 <hr/>
+
+> Warning ⚠️: In the fist start of the app you need to go to port 8568 for setup!
 
 AdGuard Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.
 

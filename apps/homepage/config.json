@@ -5,7 +5,7 @@
   "available": true,
   "short_desc": "A highly customizable homepage.",
   "author": "gethomepage",
-  "port": 8008,
+  "port": 8646,
   "categories": ["utilities"],
   "description": "A modern, fully static, fast, secure fully proxied, highly customizable application dashboard with integrations for over 100 services and translations into multiple languages.",
   "tipi_version": 1,
