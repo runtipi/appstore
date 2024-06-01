@@ -14,5 +14,6 @@
   "website": "https://gethomepage.dev",
   "exposable": true,
   "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [],
   "dynamic_config": true
 }

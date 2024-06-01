@@ -13,5 +13,20 @@
   "source": "https://github.com/coder/code-server",
   "exposable": true,
   "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [
+    {
+      "type": "password",
+      "label": "Code server password.",
+      "min": 8,
+      "required": true,
+      "env_variable": "${CODE_SERVER_PASSWORD}"
+    },
+    {
+      "type": "password",
+      "label": "Code server sudo password.",
+      "min": 8,
+      "env_variable": "${CODE_SERVER_SUDO_PASSWORD}"
+    }
+  ],
   "dynamic_config": true
 }
