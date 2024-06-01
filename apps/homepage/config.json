@@ -1,0 +1,16 @@
+{
+  "name": "Homepage",
+  "id": "homepage",
+  "available": true,
+  "short_desc": "A highly customizable homepage.",
+  "author": "gethomepage",
+  "port": 8008,
+  "categories": ["utilities"],
+  "description": "A modern, fully static, fast, secure fully proxied, highly customizable application dashboard with integrations for over 100 services and translations into multiple languages.",
+  "tipi_version": 1,
+  "version": "v0.8.13",
+  "source": "https://github.com/gethomepage/homepage",
+  "website": "https://gethomepage.dev",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"]
+}

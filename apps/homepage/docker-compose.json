@@ -1,0 +1,22 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "homepage",
+      "image": "ghcr.io/gethomepage/homepage:v0.8.13",
+      "internalPort": 3000,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/app/config",
+          "hostPath": "${APP_DATA_DIR}/data/config"
+        },
+        {
+          "containerPath": "/var/run/docker.sock",
+          "hostPath": "/var/run/docker.sock",
+          "readOnly": true
+        }
+      ]
+    }
+  ]
+}
