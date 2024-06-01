@@ -7,7 +7,6 @@
 | code-server   | yes   |
 | deluge        | yes   |
 | filebrowser   | yes   |
-| glance        | yes   |
 | homarr        | yes   |
 | homepage      | yes   |
 | invidious     | no    |
