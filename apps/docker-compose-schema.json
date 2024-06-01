@@ -108,21 +108,17 @@
             "type": "object",
             "additionalProperties": {
               "type": "object",
-              "additionalProperties": false,
               "properties": {
                 "condition": {
                   "type": "string",
-                  "oneOf": [
-                    {
-                      "enum": [
-                        "service_healthy",
-                        "service_started",
-                        "service_completed_successfully"
-                      ]
-                    }
+                  "enum": [
+                    "service_healthy",
+                    "service_started",
+                    "service_completed_successfully"
                   ]
                 }
-              }
+              },
+              "required": ["condition"]
             }
           },
           "command": {
@@ -133,5 +129,5 @@
       "required": ["name", "image"]
     }
   },
-  "required": ["$schema", "services"]
+  "required": ["services"]
 }

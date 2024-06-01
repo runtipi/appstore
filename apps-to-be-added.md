@@ -9,7 +9,7 @@
 | filebrowser   | yes   |
 | homarr        | yes   |
 | homepage      | yes   |
-| invidious     | no    |
+| invidious     | yes   |
 | it-tools      | no    |
 | jackett       | no    |
 | jellyfin      | no    |
@@ -62,4 +62,11 @@
         "readOnly": true,
     }
 ]
+```
+
+- Arch specific compose files
+
+```
+docker-compose.json // x86
+docker-compose.arm64.json // arm64
 ```

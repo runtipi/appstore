@@ -1,0 +1,32 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Invidious",
+  "id": "invidious",
+  "available": true,
+  "short_desc": "Invidious is an alternative front-end to YouTube.",
+  "author": "iv-org",
+  "port": 8452,
+  "categories": ["media", "social"],
+  "description": "Invidious is an open-source alternative front-end to YouTube written in Crystal.",
+  "tipi_version": 1,
+  "version": "2024.04.26-eda7444",
+  "source": "https://github.com/iv-org/invidious",
+  "website": "https://invidious.io",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Invidious database password.",
+      "min": 32,
+      "env_variable": "INVIDIOUS_DB_PASSWORD"
+    },
+    {
+      "type": "random",
+      "label": "Invidious hmac key.",
+      "min": 32,
+      "env_variable": "INVIDIOUS_HMAC_KEY"
+    }
+  ],
+  "dynamic_config": true
+}
