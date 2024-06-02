@@ -1,0 +1,22 @@
+{
+  "name": "appstore",
+  "version": "1.0.0",
+  "description": "The new app store for runtipi.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runtipi/runtipi-appstore.git"
+  },
+  "keywords": [
+    "self-hosted",
+    "selfhosted",
+    "runtipi",
+    "tipi",
+    "docker"
+  ],
+  "author": "runtipi",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/runtipi/runtipi-appstore/issues"
+  },
+  "homepage": "https://runtipi.io"
+}
