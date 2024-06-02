@@ -1,0 +1,2 @@
+# Make prettier not convert this: {{hello}} to this: { { hello } }
+*.template
