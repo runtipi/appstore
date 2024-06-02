@@ -7,12 +7,12 @@
       "internalPort": 3000,
       "isMain": true,
       "environment": {
-        "INVIDIOUS_CONFIG_FILE": "/config/config.yml"
+        "INVIDIOUS_CONFIG_FILE": "/config.yml"
       },
       "volumes": [
         {
-          "containerPath": "/config",
-          "hostPath": "${APP_DATA_DIR}/data/config"
+          "containerPath": "/config.yml",
+          "hostPath": "${APP_DATA_DIR}/data/config.yml"
         }
       ],
       "dependsOn": {
