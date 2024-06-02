@@ -1,10 +1,10 @@
 db:
   user: tipi
-  password: ${INVIDIOUS_DB_PASSWORD}
+  password: { { INVIDIOUS_DB_PASSWORD } }
   host: invidious-db
   port: 5432
   dbname: invidious
 
 check_tables: true
 
-hmac_key: ${INVIDIOUS_HMAC_KEY}
+hmac_key: { { INVIDIOUS_HMAC_KEY } }
