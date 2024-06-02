@@ -70,3 +70,5 @@
 docker-compose.json // x86
 docker-compose.arm64.json // arm64
 ```
+
+- Internal port shouldn't required if the service is not main
