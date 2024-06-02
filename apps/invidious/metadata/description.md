@@ -1,19 +1,6 @@
 <div align="center">
   <h1>Invidious</h1>
   <h3>An open source alternative front-end to YouTube</h3>
-
-<a href="https://invidious.io/">Website</a>
-&nbsp;•&nbsp;
-<a href="https://instances.invidious.io/">Instances list</a>
-&nbsp;•&nbsp;
-<a href="https://docs.invidious.io/faq/">FAQ</a>
-&nbsp;•&nbsp;
-<a href="https://docs.invidious.io/">Documentation</a>
-&nbsp;•&nbsp;
-<a href="#contribute">Contribute</a>
-&nbsp;•&nbsp;
-<a href="https://invidious.io/donate/">Donate</a>
-
 </div>
 
 ## Features
