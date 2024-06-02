@@ -7,12 +7,12 @@
       "internalPort": 3000,
       "isMain": true,
       "environment": {
-        "INVIDIOUS_CONFIG_FILE": "/config.yml"
+        "INVIDIOUS_CONFIG_FILE": "/config/config.yml"
       },
       "volumes": [
         {
-          "containerPath": "/config.yml",
-          "hostPath": "${APP_DATA_DIR}/data/config/config.yml"
+          "containerPath": "/config",
+          "hostPath": "${APP_DATA_DIR}/data/config"
         }
       ],
       "dependsOn": {
@@ -36,7 +36,7 @@
         },
         {
           "containerPath": "/docker-entrypoint-initdb.d/init-invidious-db.sh",
-          "hostPath": "${APP_DATA_DIR}/docker/init-invidious-db.sh"
+          "hostPath": "${APP_DATA_DIR}/data/docker/init-invidious-db.sh"
         }
       ],
       "environment": {
