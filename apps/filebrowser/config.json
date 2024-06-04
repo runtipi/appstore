@@ -3,7 +3,7 @@
   "name": "Filebrowser",
   "id": "filebrowser",
   "available": true,
-  "short_desc": "Web File Browser",
+  "short_desc": "Web File Browser.",
   "author": "filebrowser",
   "port": 8645,
   "categories": ["data", "utilities"],
