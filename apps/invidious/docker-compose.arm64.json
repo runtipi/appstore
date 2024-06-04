@@ -7,8 +7,14 @@
       "internalPort": 3000,
       "isMain": true,
       "environment": {
-        "INVIDIOUS_CONFIG": "{db: {dbname: invidious, user: tipi, password: '${INVIDIOUS_DB_PASSWORD}', host: invidious-db, port: 5432, check_tables: true, hmac_key: '${INVIDIOUS_HMAC_KEY}'}}"
+        "INVIDIOUS_CONFIG_FILE": "/config.yml"
       },
+      "volumes": [
+        {
+          "containerPath": "/config.yml",
+          "hostPath": "${APP_DATA_DIR}/data/config.yml"
+        }
+      ],
       "dependsOn": {
         "invidious-db": {
           "condition": "service_started"
@@ -18,6 +24,7 @@
     {
       "name": "invidious-db",
       "image": "postgres:14",
+      "internalPort": 5432,
       "volumes": [
         {
           "containerPath": "/var/lib/postgresql/data",
@@ -29,7 +36,7 @@
         },
         {
           "containerPath": "/docker-entrypoint-initdb.d/init-invidious-db.sh",
-          "hostPath": "${APP_DATA_DIR}/docker/init-invidious-db.sh"
+          "hostPath": "${APP_DATA_DIR}/data/docker/init-invidious-db.sh"
         }
       ],
       "environment": {
