@@ -17,13 +17,13 @@
   "form_fields": [
     {
       "type": "random",
-      "label": "Invidious database password.",
+      "label": "Invidious database password",
       "min": 32,
       "env_variable": "INVIDIOUS_DB_PASSWORD"
     },
     {
       "type": "random",
-      "label": "Invidious hmac key.",
+      "label": "Invidious hmac key",
       "min": 32,
       "env_variable": "INVIDIOUS_HMAC_KEY"
     }
