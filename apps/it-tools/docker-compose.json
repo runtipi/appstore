@@ -1,0 +1,11 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "it-tools",
+      "image": "ghcr.io/corentinth/it-tools:2024.5.13-a0bc346",
+      "internalPort": 80,
+      "isMain": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "IT Tools",
+  "id": "it-tools",
+  "available": true,
+  "short_desc": "Useful tools for developers and people working in IT.",
+  "author": "CorentinTh",
+  "port": 8456,
+  "categories": ["development", "utilities"],
+  "description": "Collection of handy online tools for developers, with great UX.",
+  "tipi_version": 1,
+  "version": "2024.5.13-a0bc346",
+  "source": "https://github.com/CorentinTh/it-tools",
+  "website": "https://it-tools.tech",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [],
+  "dynamic_config": true
+}

@@ -34,5 +34,6 @@
       "min": 32,
       "env_variable": "NEXTCLOUD_DB_PASSWORD"
     }
-  ]
+  ],
+  "dynamic_config": true
 }

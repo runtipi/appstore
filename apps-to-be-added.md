@@ -10,7 +10,7 @@
 | homarr        | yes   |
 | homepage      | yes   |
 | invidious     | yes   |
-| it-tools      | no    |
+| it-tools      | yes   |
 | jackett       | no    |
 | jellyfin      | no    |
 | lidarr        | no    |
