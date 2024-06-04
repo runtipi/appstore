@@ -1,5 +1,5 @@
 db:
-  user: tipi
+  user: invidious
   password: {{INVIDIOUS_DB_PASSWORD}}
   host: invidious-db
   port: 5432

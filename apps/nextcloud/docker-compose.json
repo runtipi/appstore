@@ -1,0 +1,41 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "nextcloud",
+      "image": "nextcloud:29.0.1",
+      "internalPort": 80,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/var/www/html",
+          "hostPath": "${APP_DATA_DIR}/data/nextcloud"
+        }
+      ],
+      "environment": {
+        "POSTGRES_HOST": "nextcloud-db",
+        "POSTGRES_DB": "nextcloud",
+        "POSTGRES_USER": "nextcloud",
+        "POSTGRES_PASSWORD": "${NEXTCLOUD_DB_PASSWORD}",
+        "NEXTCLOUD_ADMIN_PASSWORD": "${NEXTCLOUD_ADMIN_PASSWORD}",
+        "NEXTCLOUD_ADMIN_USER": "${NEXTCLOUD_ADMIN_USER}"
+      }
+    },
+    {
+      "name": "nextcloud-db",
+      "image": "postgres:14",
+      "internalPort": 5432,
+      "volumes": [
+        {
+          "containerPath": "/var/lib/postgresql/data",
+          "hostPath": "${APP_DATA_DIR}/data/db"
+        }
+      ],
+      "environment": {
+        "POSTGRES_DB": "nextcloud",
+        "POSTGRES_USER": "nextcloud",
+        "POSTGRES_PASSWORD": "${NEXTCLOUD_DB_PASSWORD}"
+      }
+    }
+  ]
+}

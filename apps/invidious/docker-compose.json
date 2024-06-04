@@ -41,7 +41,7 @@
       ],
       "environment": {
         "POSTGRES_DB": "invidious",
-        "POSTGRES_USER": "tipi",
+        "POSTGRES_USER": "invidious",
         "POSTGRES_PASSWORD": "${INVIDIOUS_DB_PASSWORD}"
       }
     }

@@ -15,7 +15,7 @@
 | jellyfin      | no    |
 | lidarr        | no    |
 | navidrome     | no    |
-| nextcloud     | no    |
+| nextcloud     | yes   |
 | ollama-cpu    | no    |
 | ollama-amd    | no    |
 | ollama-nvidia | no    |
