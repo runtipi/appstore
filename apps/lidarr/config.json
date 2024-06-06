@@ -1,0 +1,19 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Lidarr",
+  "id": "lidarr",
+  "available": true,
+  "short_desc": "Looks and smells like Sonarr but made for music.",
+  "author": "Lidarr",
+  "port": 8765,
+  "categories": ["music"],
+  "description": "TLidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them.",
+  "tipi_version": 1,
+  "version": "v2.3.3",
+  "source": "https://github.com/Lidarr/Lidarr",
+  "website": "http://lidarr.audio",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [],
+  "dynamic_config": true
+}

@@ -13,7 +13,7 @@
 | it-tools      | yes   |
 | jackett       | yes   |
 | jellyfin      | yes   |
-| lidarr        | no    |
+| lidarr        | yes   |
 | navidrome     | no    |
 | nextcloud     | yes   |
 | ollama-cpu    | no    |
