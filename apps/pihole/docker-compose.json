@@ -1,0 +1,33 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "pihole",
+      "image": "pihole/pihole:2024.05.0",
+      "internalPort": 80,
+      "addPorts": [
+        {
+          "containerPort": 53,
+          "hostPort": 53,
+          "tcp": true,
+          "udp": true
+        }
+      ],
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/etc/pihole",
+          "hostPath": "${APP_DATA_DIR}/data/pihole"
+        },
+        {
+          "containerPath": "/etc/dnsmasq.d",
+          "hostPath": "${APP_DATA_DIR}/data/dnsmasq"
+        }
+      ],
+      "environment": {
+        "TZ": "${TZ}",
+        "WEBPASSWORD": "${PIHOLE_WEBPASSWORD}"
+      }
+    }
+  ]
+}

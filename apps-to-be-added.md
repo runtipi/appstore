@@ -19,7 +19,7 @@
 | ollama        | yes   |
 | onedev        | yes   |
 | open-webui    | yes   |
-| pihole        | no    |
+| pihole        | yes   |
 | plausible     | no    |
 | plex          | no    |
 | portainer     | no    |

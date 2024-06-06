@@ -1,0 +1,28 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Pihole",
+  "id": "pihole",
+  "available": true,
+  "short_desc": "A black hole for Internet advertisements.",
+  "author": "pi-hole",
+  "port": 8256,
+  "categories": ["network"],
+  "description": "The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.",
+  "tipi_version": 1,
+  "version": "2024.05.0",
+  "source": "https://github.com/pi-hole/pi-hole",
+  "website": "https://pi-hole.net",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "url_suffix": "/admin",
+  "form_fields": [
+    {
+      "type": "password",
+      "label": "Pihole web UI password",
+      "min": 8,
+      "required": true,
+      "env_variable": "PIHOLE_WEBPASSWORD"
+    }
+  ],
+  "dynamic_config": true
+}
