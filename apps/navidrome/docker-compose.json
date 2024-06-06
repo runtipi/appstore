@@ -1,0 +1,22 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "navidrome",
+      "image": "deluan/navidrome:0.52.5",
+      "internalPort": 4533,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/data",
+          "hostPath": "${APP_DATA_DIR}/data/"
+        },
+        {
+          "containerPath": "/music",
+          "hostPath": "${ROOT_FOLDER_HOST}/media/music",
+          "readOnly": true
+        }
+      ]
+    }
+  ]
+}

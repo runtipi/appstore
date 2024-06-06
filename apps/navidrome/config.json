@@ -1,0 +1,19 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Navidrome",
+  "id": "navidrome",
+  "available": true,
+  "short_desc": "Modern Music Server and Streamer compatible with Subsonic/Airsonic.",
+  "author": "navidrome",
+  "port": 8756,
+  "categories": ["music"],
+  "description": "Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device. It's like your personal Spotify!",
+  "tipi_version": 1,
+  "version": "0.52.5",
+  "source": "https://github.com/navidrome/navidrome",
+  "website": "https://www.navidrome.org",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [],
+  "dynamic_config": true
+}

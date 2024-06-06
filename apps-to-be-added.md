@@ -14,7 +14,7 @@
 | jackett       | yes   |
 | jellyfin      | yes   |
 | lidarr        | yes   |
-| navidrome     | no    |
+| navidrome     | yes   |
 | nextcloud     | yes   |
 | ollama-cpu    | no    |
 | ollama-amd    | no    |
