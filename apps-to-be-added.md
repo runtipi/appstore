@@ -11,7 +11,7 @@
 | homepage      | yes   |
 | invidious     | yes   |
 | it-tools      | yes   |
-| jackett       | no    |
+| jackett       | yes   |
 | jellyfin      | no    |
 | lidarr        | no    |
 | navidrome     | no    |

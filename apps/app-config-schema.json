@@ -83,11 +83,11 @@
     },
     "source": {
       "type": "string",
-      "format": "uri"
+      "format": "url"
     },
     "website": {
       "type": "string",
-      "format": "uri"
+      "format": "url"
     },
     "url_suffix": {
       "type": "string",
@@ -176,7 +176,6 @@
   "required": [
     "name",
     "available",
-    "port",
     "id",
     "tipi_version",
     "version",
