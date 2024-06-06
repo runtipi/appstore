@@ -1,0 +1,35 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Open WebUI",
+  "id": "open-webui",
+  "available": true,
+  "short_desc": "User-friendly WebUI for LLMs.",
+  "author": "open-webui",
+  "port": 8898,
+  "categories": ["ai"],
+  "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline. It supports various LLM runners, including Ollama and OpenAI-compatible APIs.",
+  "tipi_version": 1,
+  "version": "git-a8d80f9",
+  "source": "https://github.com/open-webui/open-webui",
+  "website": "https://openwebui.com",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [
+    {
+      "type": "fqdn",
+      "label": "Ollama API URL",
+      "hint": "If you want to use ollama please put the server URL here.",
+      "pleaceholder": "http://ollama:11434",
+      "required": false,
+      "env_variable": "OPEN_WEBUI_OLLAMA_BASE_URL"
+    },
+    {
+      "type": "password",
+      "label": "OpenAI API key",
+      "hint": "If you want to use models like chatgpt please put your OpenAI key here.",
+      "required": false,
+      "env_variable": "OPEN_WEBUI_OPENAI_API_KEY"
+    }
+  ],
+  "dynamic_config": true
+}

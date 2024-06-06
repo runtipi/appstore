@@ -18,7 +18,7 @@
 | nextcloud     | yes   |
 | ollama        | yes   |
 | onedev        | yes   |
-| open-webui    | no    |
+| open-webui    | yes   |
 | pihole        | no    |
 | plausible     | no    |
 | plex          | no    |

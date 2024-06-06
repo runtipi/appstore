@@ -1,0 +1,21 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "open-webui",
+      "image": "ghcr.io/open-webui/open-webui:git-a8d80f9",
+      "internalPort": 8080,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/app/backend/data",
+          "hostPath": "${APP_DATA_DIR}/data/"
+        }
+      ],
+      "environment": {
+        "OLLAMA_BASE_URL": "${OPEN_WEBUI_OLLAMA_BASE_URL}",
+        "OPENAI_API_KEY": "${OPEN_WEBUI_OPENAI_API_KEY}"
+      }
+    }
+  ]
+}
