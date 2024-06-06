@@ -16,9 +16,7 @@
 | lidarr        | yes   |
 | navidrome     | yes   |
 | nextcloud     | yes   |
-| ollama-cpu    | no    |
-| ollama-amd    | no    |
-| ollama-nvidia | no    |
+| ollama        | yes   |
 | onedev        | no    |
 | open-webui    | no    |
 | pihole        | no    |

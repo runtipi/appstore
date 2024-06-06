@@ -1,0 +1,17 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "ollama",
+      "image": "ollama/ollama:0.1.41",
+      "internalPort": 11434,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/root/.ollama",
+          "hostPath": "${APP_DATA_DIR}/data/"
+        }
+      ]
+    }
+  ]
+}

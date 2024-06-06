@@ -1,0 +1,20 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Ollama",
+  "id": "ollama",
+  "available": true,
+  "short_desc": "Get up and running with Llama 3, Mistral, Gemma, and other large language models.",
+  "author": "ollama",
+  "port": 11434,
+  "no_gui": true,
+  "categories": ["ai"],
+  "description": "Run Llama 3, Phi 3, Mistral, Gemma, and other models. Customize and create your own.",
+  "tipi_version": 1,
+  "version": "0.1.41",
+  "source": "https://github.com/ollama/ollama",
+  "website": "https://ollama.com",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [],
+  "dynamic_config": true
+}

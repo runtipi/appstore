@@ -184,6 +184,8 @@
     "short_desc",
     "author",
     "source",
-    "form_fields"
+    "form_fields",
+    "port",
+    "dynamic_config"
   ]
 }
