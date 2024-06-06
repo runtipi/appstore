@@ -5,7 +5,7 @@
   "available": true,
   "short_desc": "Git Server with CI/CD, Kanban, and Packages.",
   "author": "theonedev",
-  "port": 6611,
+  "port": 6610,
   "categories": ["development"],
   "description": "Git Server with CI/CD, Kanban, and Packages. Seamless integration. Unparalleled experience.",
   "tipi_version": 1,
