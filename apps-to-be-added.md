@@ -20,7 +20,7 @@
 | onedev        | yes   |
 | open-webui    | yes   |
 | pihole        | yes   |
-| plausible     | no    |
+| plausible     | yes   |
 | plex          | no    |
 | portainer     | no    |
 | prowlarr      | no    |
@@ -34,6 +34,7 @@
 | wg-easy       | no    |
 | zerotier      | no    |
 | lodestone     | no    |
+| gitea         | no    |
 
 ### Required compose generation featurs missing from runtipi
 

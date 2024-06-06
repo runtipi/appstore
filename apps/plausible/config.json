@@ -1,0 +1,44 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Plausible",
+  "id": "plausible",
+  "available": true,
+  "short_desc": "Simple, open source, lightweight and privacy-friendly web analytics alternative to Google Analytics.",
+  "author": "plausible",
+  "port": 8356,
+  "categories": ["utilities"],
+  "description": "Plausible Analytics is an easy to use, lightweight (< 1 KB), open source and privacy-friendly alternative to Google Analytics. It doesn’t use cookies and is fully compliant with GDPR, CCPA and PECR.",
+  "tipi_version": 1,
+  "version": "v2.1.1",
+  "source": "https://github.com/plausible/analytics",
+  "website": "https://plausible.io",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Plausible secret key",
+      "min": 32,
+      "env_variable": "PLAUSIBLE_SECRET_KEY"
+    },
+    {
+      "type": "random",
+      "label": "Plausible totp vault key",
+      "min": 32,
+      "env_variable": "PLAUSIBLE_TOTP_VAULT_KEY"
+    },
+    {
+      "type": "random",
+      "label": "Plausible database password",
+      "min": 32,
+      "env_variable": "PLAUSIBLE_DB_PASSWORD"
+    },
+    {
+      "type": "boolean",
+      "label": "Disable plausible user registration",
+      "default": true,
+      "env_variable": "PLAUSIBLE_DISABLE_REGISTRATION"
+    }
+  ],
+  "dynamic_config": true
+}
