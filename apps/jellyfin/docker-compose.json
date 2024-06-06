@@ -1,0 +1,24 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "jellyfin",
+      "image": "linuxserver/jellyfin:10.9.5",
+      "internalPort": 8096,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/config",
+          "hostPath": "${APP_DATA_DIR}/data/config"
+        },
+        {
+          "containerPath": "/media",
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data"
+        }
+      ],
+      "environment": {
+        "TZ": "${TZ}"
+      }
+    }
+  ]
+}

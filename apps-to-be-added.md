@@ -12,7 +12,7 @@
 | invidious     | yes   |
 | it-tools      | yes   |
 | jackett       | yes   |
-| jellyfin      | no    |
+| jellyfin      | yes   |
 | lidarr        | no    |
 | navidrome     | no    |
 | nextcloud     | yes   |
