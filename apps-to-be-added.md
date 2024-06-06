@@ -17,7 +17,7 @@
 | navidrome     | yes   |
 | nextcloud     | yes   |
 | ollama        | yes   |
-| onedev        | no    |
+| onedev        | yes   |
 | open-webui    | no    |
 | pihole        | no    |
 | plausible     | no    |

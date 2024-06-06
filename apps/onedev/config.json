@@ -1,0 +1,19 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Onedev",
+  "id": "onedev",
+  "available": true,
+  "short_desc": "Git Server with CI/CD, Kanban, and Packages.",
+  "author": "theonedev",
+  "port": 6611,
+  "categories": ["development"],
+  "description": "Git Server with CI/CD, Kanban, and Packages. Seamless integration. Unparalleled experience.",
+  "tipi_version": 1,
+  "version": "10.8.0",
+  "source": "https://code.onedev.io",
+  "website": "https://onedev.io",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [],
+  "dynamic_config": true
+}
