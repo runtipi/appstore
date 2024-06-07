@@ -9,6 +9,7 @@
 | filebrowser   | yes   |
 | homarr        | yes   |
 | homepage      | yes   |
+| immich        | no   |
 | invidious     | yes   |
 | it-tools      | yes   |
 | jackett       | yes   |

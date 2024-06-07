@@ -1,0 +1,116 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "immich",
+      "image": "ghcr.io/immich-app/immich-server:v1.105.1",
+      "command": "start-server.sh",
+      "internalPort": 3001,
+      "volumes": [
+        {
+          "containerPath": "/usr/src/app/upload",
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/images/immich"
+        }
+      ],
+      "environment": {
+        "NODE_ENV": "production",
+        "DB_HOSTNAME": "immich-db",
+        "DB_USERNAME": "tipi",
+        "DB_PASSWORD": "${DB_PASSWORD}",
+        "ENABLE_MAPBOX": "false",
+        "DB_DATABASE_NAME": "immich",
+        "REDIS_HOSTNAME": "immich-redis",
+        "JWT_SECRET": "${JWT_SECRET}"
+      },
+      "dependsOn": {
+        "immich-redis": {
+          "condition": "service_started"
+        },
+        "immich-db": {
+          "condition": "service_started"
+        }
+      },
+      "isMain": true
+    },
+    {
+      "name": "immich-microservices",
+      "image": "ghcr.io/immich-app/immich-server:v1.105.1",
+      "command": "start-microservices.sh",
+      "internalPort": 3001,
+      "volumes": [
+        {
+          "containerPath": "/usr/src/app/upload",
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/images/immich"
+        }
+      ],
+      "environment": {
+        "NODE_ENV": "production",
+        "DB_HOSTNAME": "immich-db",
+        "DB_USERNAME": "tipi",
+        "DB_PASSWORD": "${DB_PASSWORD}",
+        "DB_DATABASE_NAME": "immich",
+        "REDIS_HOSTNAME": "immich-redis",
+        "JWT_SECRET": "${JWT_SECRET}",
+        "ENABLE_MAPBOX": "false"
+      },
+      "dependsOn": {
+        "immich-redis": {
+          "condition": "service_started"
+        },
+        "immich-db": {
+          "condition": "service_started"
+        }
+      }
+    },
+    {
+      "name": "immich-machine-learning",
+      "image": "ghcr.io/immich-app/immich-machine-learning:v1.105.1",
+      "internalPort": 3001,
+      "volumes": [
+        {
+          "containerPath": "/usr/src/app/upload",
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/images/immich"
+        },
+        {
+          "containerPath": "/cache",
+          "hostPath": "${APP_DATA_DIR}/data/immich-ml-cache"
+        }
+      ],
+      "environment": {
+        "NODE_ENV": "production",
+        "DB_HOSTNAME": "immich-db",
+        "DB_USERNAME": "tipi",
+        "DB_PASSWORD": "${DB_PASSWORD}",
+        "DB_NAME": "immich",
+        "DB_DATABASE_NAME": "immich"
+      },
+      "dependsOn": {
+        "immich-db": {
+          "condition": "service_started"
+        }
+      }
+    },
+    {
+      "name": "immich-redis",
+      "image": "redis:6.2",
+      "internalPort": 6379
+    },
+    {
+      "name": "immich-db",
+      "image": "docker.io/tensorchord/pgvecto-rs:pg14-v0.2.0@sha256:90724186f0a3517cf6914295b5ab410db9ce23190a2d9d0b9dd6463e3fa298f0",
+      "internalPort": 5432,
+      "environment": {
+        "POSTGRES_PASSWORD": "${DB_PASSWORD}",
+        "POSTGRES_USER": "tipi",
+        "POSTGRES_DB": "immich",
+        "PG_DATA": "/var/lib/postgresql/data"
+      },
+      "volumes": [
+        {
+          "containerPath": "/var/lib/postgresql/data",
+          "hostPath": "${APP_DATA_DIR}/data/db"
+        }
+      ]
+    }
+  ]
+}
