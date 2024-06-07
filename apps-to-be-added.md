@@ -21,7 +21,7 @@
 | open-webui    | yes   |
 | pihole        | yes   |
 | plausible     | yes   |
-| plex          | no    |
+| plex          | yes   |
 | portainer     | no    |
 | prowlarr      | no    |
 | qbitorrent    | no    |
@@ -71,3 +71,9 @@ docker-compose.arm64.json // arm64
 ```
 
 - Internal port shouldn't required if the service is not main
+
+- Network mode support
+
+```json
+"network_mode": "host"
+```

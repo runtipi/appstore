@@ -1,0 +1,26 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "plex",
+      "image": "linuxserver/plex:1.40.2",
+      "internalPort": 32400,
+      "network_mode": "host",
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/config",
+          "hostPath": "${APP_DATA_DIR}/data"
+        },
+        {
+          "containerPath": "/media",
+          "hostPath": "${APP_DATA_DIR}/media/data"
+        }
+      ],
+      "environment": {
+        "TZ": "${TZ}",
+        "VERSION": "docker"
+      }
+    }
+  ]
+}

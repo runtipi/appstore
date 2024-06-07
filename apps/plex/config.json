@@ -1,0 +1,19 @@
+{
+  "$schema": "../app-config-schema.json",
+  "name": "Plex",
+  "id": "plex",
+  "available": true,
+  "short_desc": "Meet your TV concierge.",
+  "author": "linuxserver",
+  "port": 32400,
+  "categories": ["media"],
+  "description": "Need something to watch? We’re on it. Plex combines free movies & TV with your favorite streaming services, so there’s always more to discover.",
+  "tipi_version": 1,
+  "version": "1.40.2",
+  "source": "https://github.com/linuxserver/docker-plex",
+  "website": "https://plex.tv",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "form_fields": [],
+  "dynamic_config": true
+}

@@ -45,6 +45,9 @@
               "required": ["containerPort", "hostPort", "tcp", "udp"]
             }
           },
+          "network_mode": {
+            "type": "string"
+          },
           "isMain": {
             "type": "boolean"
           },
