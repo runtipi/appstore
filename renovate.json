@@ -1,6 +1,31 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "matchBaseBranches": ["main"],
+      "matchPackagePatterns": ["*/*"],
+      "automerge": true,
+      "enabled": false,
+      "groupName": "Docker Images",
+      "dependencyType": "custom",
+      "customData": {
+        "matcher": "path",
+        "matchPath": "apps/*/docker-compose.json",
+        "updateStrategy": {
+          "autoMerge": true,
+          "bumpVersionOnUpdate": true,
+          "bumpVersionOnRenovate": true,
+          "tagWhitelist": ["^\\d+\\.\\d+$"]
+        },
+        "postUpgradeTasks": {
+          "commands": [
+            "node -e \"const fs = require('fs'); const path = require('path'); const composePath = path.join(__dirname, 'apps', '{{target}}', 'docker-compose.json'); const configPath = path.join(__dirname, 'apps', '{{target}}', 'config.json'); const composeConfig = JSON.parse(fs.readFileSync(composePath, 'utf8')); const config = JSON.parse(fs.readFileSync(configPath, 'utf8')); if (!composeConfig.services.find(service => service.name === config.id)) { throw new Error('Service not found'); } const newImageVersion = '{{newVersion}}'; composeConfig.services.forEach(service => { if (service.name === config.id) { service.image = `${service.image.split(':')[0]}:${newImageVersion}`; } }); fs.writeFileSync(composePath, JSON.stringify(composeConfig)); config.version = newImageVersion; config.tipi_version++; fs.writeFileSync(configPath, JSON.stringify(config));\""
+          ],
+          "fileFilters": ["docker-compose.json", "config.json"],
+          "executionMode": "update"
+        }
+      }
+    }
   ]
 }
