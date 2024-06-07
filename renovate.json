@@ -14,7 +14,8 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "{{depName}}",
-      "versioningTemplate": "docker"
+      "versioningTemplate": "docker",
+      "currentValueTemplate": "{{currentValue}}"
     }
   ],
   "packageRules": [
