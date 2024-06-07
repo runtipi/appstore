@@ -10,7 +10,7 @@
     {
       "fileMatch": ["^apps/.*/docker-compose.json$"],
       "matchStrings": [
-        "\"image\":\\s*\"(?<depName>[^:]+)(:(?<currentValue>[^\"]+))?\""
+        "\"image\":\\s*\"(?<depName>[^\"]+):(?<currentValue>[^\"]+)\""
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
