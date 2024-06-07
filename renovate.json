@@ -14,8 +14,9 @@
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker",
-      "depNameTemplate": "{{depName}}",
-      "currentValueTemplate": "{{{versioning.extract}}}"
+      "depNameTemplate": "{{{depName}}}",
+      "currentValueTemplate": "{{{currentValue}}}",
+      "extractVersionTemplate": "{{#if (regexMatch '^.+:(?<version>[^@]+)' .depName)}}{{version}}{{else}}{{currentValue}}{{/if}}"
     }
   ],
   "packageRules": [
