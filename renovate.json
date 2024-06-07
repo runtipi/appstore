@@ -13,7 +13,8 @@
         "\"image\":\\s*\"(?<depName>.*?)\"\\s*,\\s*\"tag\":\\s*\"(?<currentValue>.*?)\""
       ],
       "depNameTemplate": "{{depName}}",
-      "versioningTemplate": "docker"
+      "versioningTemplate": "docker",
+      "datasourceTemplate": "docker"
     }
   ],
   "packageRules": [
@@ -55,4 +56,3 @@
     }
   ]
 }
-
