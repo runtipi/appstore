@@ -1,0 +1,21 @@
+{
+  "$schema": "../docker-compose-schema.json",
+  "services": [
+    {
+      "name": "portainer",
+      "image": "portainer/portainer-ce:2.20.3",
+      "internalPort": 9443,
+      "isMain": true,
+      "volumes": [
+        {
+          "containerPath": "/var/run/docker.sock",
+          "hostPath": "/var/run/docker.sock"
+        },
+        {
+          "containerPath": "/data",
+          "hostPath": "${APP_DATA_DIR}/data/"
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 | filebrowser   | yes   |
 | homarr        | yes   |
 | homepage      | yes   |
-| immich        | no   |
+| immich        | yes   |
 | invidious     | yes   |
 | it-tools      | yes   |
 | jackett       | yes   |
@@ -23,7 +23,7 @@
 | pihole        | yes   |
 | plausible     | yes   |
 | plex          | yes   |
-| portainer     | no    |
+| portainer     | yes   |
 | prowlarr      | no    |
 | qbitorrent    | no    |
 | radarr        | no    |
