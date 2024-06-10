@@ -36,6 +36,16 @@
 | zerotier      | no    |
 | lodestone     | no    |
 | gitea         | no    |
+| duplicati     | no    |
+| syncthing     | no    |
+| freshrss      | no    |
+| homeassistant | no    |
+| homebridge    | no    |
+| node-red      | no    |
+| n8n           | no    |
+| photoprism    | no    |
+| mealie        | no    |
+| calibre       | no    |
 
 ### Required compose generation featurs missing from runtipi
 
