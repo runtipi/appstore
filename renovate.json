@@ -18,5 +18,10 @@
       "matchDatasources": ["docker"],
       "automerge": true
     }
-  ]
+  ],
+  "postUpgradeTasks": {
+    "commands": ["node update.ts"],
+    "fileFilters": ["^.*docker-compose\\.json$"],
+    "executionMode": "update"
+  }
 }
