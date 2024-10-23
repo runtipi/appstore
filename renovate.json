@@ -20,7 +20,9 @@
     }
   ],
   "postUpgradeTasks": {
-    "commands": ["bun update.ts {{packageFile}} {{newVersion}}"],
+    "commands": [
+      "node -e \"const fs = require('fs'); const path = require('path'); const composePath = path.join(__dirname, '{{packageFile}}'); const configPath = path.join(path.dirname(composePath), 'config.json'); const config = JSON.parse(fs.readFileSync(configPath, 'utf8')); config.version = '{{newVersion}}'; config.tipi_version = config.tipi_version + 1; config.updated_at = new Date().getTime(); fs.writeFileSync(configPath, JSON.stringify(config, null, 2));\""
+    ],
     "fileFilters": ["docker-compose.json"],
     "executionMode": "update"
   }
