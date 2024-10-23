@@ -20,7 +20,7 @@
     }
   ],
   "postUpgradeTasks": {
-    "commands": ["node update.ts"],
+    "commands": ["bun update.ts"],
     "fileFilters": ["^.*docker-compose\\.json$"],
     "executionMode": "update"
   }

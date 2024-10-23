@@ -9,6 +9,10 @@ const updateConfig = async () => {
   try {
     const { stdout, stderr } = await exec(`git diff --name-only`);
 
+    if (!stdout.trim().includes("apps")) {
+      return;
+    }
+
     if (stderr) {
       console.error(`Failed to get changed files! Error: ${stderr}`);
       return;
