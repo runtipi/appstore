@@ -16,7 +16,7 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "automerge": true
+      "automerge": false
     }
   ],
   "postUpgradeTasks": {
