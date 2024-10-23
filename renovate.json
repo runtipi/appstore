@@ -1,5 +1,8 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
+  "rebaseWhen": "conflicted",
+  "dependencyDashboard": true,
   "customManagers": [
     {
       "customType": "regex",
@@ -8,22 +11,12 @@
         "\"image\":\\s*\"(?<depName>[\\w.-]+):(?<currentValue>[\\w.-]+)\""
       ],
       "datasourceTemplate": "docker"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": ["^.*config\\.json$"],
-      "matchStrings": [
-        "\"version\":\\s*\"(?<depName>[\\w.-]+)\",\\s*\"tipi_version\":\\s*(?<currentValue>\\d+)"
-      ],
-      "datasourceTemplate": "docker"
     }
   ],
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "groupName": "docker updates",
-      "automerge": true,
-      "postUpdateOptions": ["bumpTipiVersion"]
+      "automerge": true
     }
   ]
 }
