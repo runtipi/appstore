@@ -1,36 +1,10 @@
-import { exec as execCallback } from "child_process";
-import { promisify } from "util";
 import fs from "fs";
 import path from "path";
 
-const exec = promisify(execCallback);
-
-const updateConfig = async () => {
+const updateConfig = async (packageFile: string, newVersion: string) => {
   try {
-    const { stdout, stderr } = await exec(`git diff --name-only`);
-
-    if (!stdout.trim().includes("apps")) {
-      return;
-    }
-
-    if (stderr) {
-      console.error(`Failed to get changed files! Error: ${stderr}`);
-      return;
-    }
-
-    const splittedPath = stdout.trim().split("/");
-    const appId = splittedPath[splittedPath.length - 2];
-    const configPath = path.join("apps", appId, "config.json");
-    const compose = JSON.parse(
-      await fs.promises.readFile(stdout.trim(), "utf8")
-    );
-    let newVersion: string = "";
-
-    for (const service of compose.services) {
-      if (appId == service.name) {
-        newVersion = service.image.split(":")[1];
-      }
-    }
+    const composePath = path.join(__dirname, packageFile);
+    const configPath = path.join(path.dirname(composePath), "config.json");
 
     const config = JSON.parse(await fs.promises.readFile(configPath, "utf8"));
 
@@ -44,4 +18,7 @@ const updateConfig = async () => {
   }
 };
 
-updateConfig();
+const packageFile = process.argv[2];
+const newVersion = process.argv[3];
+
+updateConfig(packageFile, newVersion);

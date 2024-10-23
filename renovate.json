@@ -20,8 +20,8 @@
     }
   ],
   "postUpgradeTasks": {
-    "commands": ["bun update.ts"],
-    "fileFilters": ["**/*"],
+    "commands": ["bun update.ts {{packageFile}} {{newVersion}}"],
+    "fileFilters": ["docker-compose.json"],
     "executionMode": "update"
   }
 }
