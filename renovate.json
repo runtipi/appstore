@@ -23,5 +23,6 @@
     "commands": ["node update.ts"],
     "fileFilters": ["^.*docker-compose\\.json$"],
     "executionMode": "update"
-  }
+  },
+  "allowedPostUpgradeCommands": ["node update.ts"]
 }
