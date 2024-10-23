@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/runtipi/runtipi-appstore/issues"
   },
-  "homepage": "https://runtipi.io"
+  "homepage": "https://runtipi.io",
+  "dependencies": {
+    "@types/node": "^22.7.9"
+  }
 }

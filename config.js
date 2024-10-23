@@ -1,3 +1,3 @@
 module.exports = {
-  allowedPostUpgradeCommands: ["^bun update.ts$"],
+  allowedPostUpgradeCommands: ["^bun update.ts"],
 };
