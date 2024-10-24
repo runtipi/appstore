@@ -8,25 +8,22 @@ jobs:
     if: contains(github.head_ref, 'renovate/')
     runs-on: ubuntu-latest
     outputs:
-      name: ${{ steps.changed-file.outputs.name }}
+      name: ${{ steps.changed-file.outputs.all_changed_files }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Get changed file
+      - name: Get changed files
+        uses: tj-actions/changed-files@v45
+        id: changed-files
+
+      - name: Get first changed file
         id: changed-file
         run: |
-          git status
-          git diff --name-only origin/HEAD ${{ github.head_ref }} | head -n 1
-          echo "name=$(git diff --name-only origin/HEAD origin/${{ github.head_ref }} | head -n 1)" >> $GITHUB_OUTPUT
-
-      - name: Debug
-        run: |
-          echo ${{ contains(github.head_ref, 'renovate/') }}
-          echo ${{ steps.changed-file.outputs.name }}
-          echo ${{ contains(steps.changed-file.outputs.name, 'docker-compose.json') }}
+          echo ${{ steps.changed-files.outputs.all_changed_files }}
+          echo "name=$(echo ${{ steps.changed-files.outputs.all_changed_files }} | head -n 1)" >> $GITHUB_OUTPUT
 
   update-config:
     needs: get-changed-file
