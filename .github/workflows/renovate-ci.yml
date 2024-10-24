@@ -49,9 +49,6 @@ jobs:
         with:
           message: "chore: update config"
 
-      - name: Debug
-        run: echo ${{ steps.update.outputs.auto_merge }}
-
   auto_merge_label:
     needs: update-config
     runs-on: ubuntu-latest
