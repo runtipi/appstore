@@ -21,7 +21,7 @@
   ],
   "postUpgradeTasks": {
     "commands": ["bun update.ts {{packageFile}} {{newVersion}}"],
-    "fileFilters": ["docker-compose.json"],
+    "fileFilters": ["**/**"],
     "executionMode": "update"
   }
 }
