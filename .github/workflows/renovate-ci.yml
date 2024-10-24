@@ -19,8 +19,8 @@ jobs:
         id: changed-file
         run: |
           git status
-          git diff --name-only origin/main origin/${{ github.head_ref }} | head -n 1
-          echo "name=$(git diff --name-only origin/main origin/${{ github.head_ref }} | head -n 1)" >> $GITHUB_OUTPUT
+          git diff --name-only origin/HEAD ${{ github.head_ref }} | head -n 1
+          echo "name=$(git diff --name-only origin/HEAD origin/${{ github.head_ref }} | head -n 1)" >> $GITHUB_OUTPUT
 
       - name: Debug
         run: |
