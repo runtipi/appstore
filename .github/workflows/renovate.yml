@@ -26,4 +26,4 @@ jobs:
         run: echo ${{ github.repository }}
 
       - name: Run renovate
-        run: LOG_LEVEL=debug renovate --token ${{ secrets.GITHUB_TOKEN}} ${{ github.repository }}
+        run: renovate --token ${{ secrets.GITHUB_TOKEN}} ${{ github.repository }}
