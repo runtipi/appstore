@@ -16,6 +16,9 @@ jobs:
         id: changed-file
         run: echo "name=$(apps/nginx/docker-compose.json)" >> $GITHUB_OUTPUT
 
+      - name: Debug
+        run: echo ${{ contains(github.head_ref, 'renovate/') }}
+
   update-config:
     needs: get-changed-file
     runs-on: ubuntu-latest
