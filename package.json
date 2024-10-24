@@ -20,6 +20,8 @@
   },
   "homepage": "https://runtipi.io",
   "dependencies": {
-    "@types/node": "^22.7.9"
+    "@types/node": "^22.7.9",
+    "@types/semver": "^7.5.8",
+    "semver": "^7.6.3"
   }
 }

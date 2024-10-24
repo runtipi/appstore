@@ -18,10 +18,5 @@
       "matchDatasources": ["docker"],
       "automerge": false
     }
-  ],
-  "postUpgradeTasks": {
-    "commands": ["bun update.ts {{packageFile}} {{newVersion}}"],
-    "fileFilters": ["apps/*/docker-compose.json"],
-    "executionMode": "update"
-  }
+  ]
 }
