@@ -18,12 +18,15 @@ jobs:
         run: echo "name=$(apps/nginx/docker-compose.json)" >> $GITHUB_OUTPUT
 
       - name: Debug
-        run: echo ${{ contains(github.head_ref, 'renovate/') }}
+        run: |
+          echo ${{ contains(github.head_ref, 'renovate/') }}
+          echo ${{ steps.changed-file.outputs.name }}
+          echo ${{ contains(steps.changed-file.outputs.name, 'docker-compose.json') }}
 
   update-config:
     needs: get-changed-file
     runs-on: ubuntu-latest
-    if: contains(github.head_ref, 'renovate/')
+    if: contains(needs.get-changed-file.outputs.name, 'docker-compose.json')
     outputs:
       auto_merge: ${{ steps.update.outputs.auto_merge }}
     steps:
@@ -36,7 +39,6 @@ jobs:
           bun-version: latest
 
       - name: Run script
-        if: ${{ contains(needs.get-changed-file.outputs.name, 'docker-compose.json') }}
         id: update
         run: echo "auto_merge=$(bun .github/scripts/update.ts ${{ needs.get-changed-file.outputs.name }})" >> $GITHUB_OUTPUT
 
@@ -48,10 +50,9 @@ jobs:
   auto_merge_label:
     needs: update-config
     runs-on: ubuntu-latest
-    if: contains(github.head_ref, 'renovate/')
+    if: ${{ needs.update-config.outputs.auto_merge == '{"auto_merge":true}' }}
     steps:
       - name: Add automerge label if auto_merge is true
-        if: ${{ needs.update-config.outputs.auto_merge == '{"auto_merge":true}' }}
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
