@@ -23,7 +23,7 @@ jobs:
         run: npm install -g renovate
 
       - name: Echo repository
-        run: echo ${{ github.repository_owner }}/${{ github.repository }}
+        run: echo ${{ github.repository }}
 
       - name: Run renovate
-        run: renovate --token ${{ secrets.RENOVATE_TOKEN }} ${{ github.repository_owner }}/${{ github.repository }}
+        run: renovate --token ${{ secrets.RENOVATE_TOKEN }} ${{ github.repository }}
