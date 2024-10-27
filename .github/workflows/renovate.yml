@@ -1,6 +1,18 @@
 name: Renovate
 on:
   workflow_dispatch:
+    inputs:
+      log_level:
+        description: Log level
+        required: false
+        default: INFO
+        type: choice
+        options:
+          - DEBUG
+          - INFO
+          - WARN
+          - ERROR
+          - FATAL
   issues:
 
 jobs:
@@ -28,4 +40,4 @@ jobs:
         run: echo ${{ github.repository }}
 
       - name: Run renovate
-        run: renovate --token ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
+        run: LOG_LEVEL=${{ github.event.inputs.log_level }} renovate --token ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
