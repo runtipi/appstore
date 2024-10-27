@@ -18,7 +18,7 @@ on:
 jobs:
   renovate:
     runs-on: ubuntu-latest
-    if: ${{ (github.event_name == 'workflow_dispatch') || contains(github.event.ref, 'renovate') || (github.event.issue.id == '17') }}
+    if: ${{ (github.event_name == 'workflow_dispatch') || contains(github.event.ref, 'renovate') || (github.event.issue.id == 17) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
