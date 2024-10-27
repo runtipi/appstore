@@ -2,11 +2,11 @@
   "services": [
     {
       "name": "multiple",
-      "image": "nginx:1.25"
+      "image": "nginx:1.27"
     },
     {
       "name": "multiple2",
-      "image": "nginx:1.26"
+      "image": "nginx:1.27"
     }
   ]
 }
