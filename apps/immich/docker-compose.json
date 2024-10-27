@@ -1,0 +1,8 @@
+{
+  "services": [
+    {
+      "name": "immich",
+      "image": "ghcr.io/immich-app/immich-server:v1.118.1"
+    }
+  ]
+}

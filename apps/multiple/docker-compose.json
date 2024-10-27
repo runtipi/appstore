@@ -1,0 +1,12 @@
+{
+  "services": [
+    {
+      "name": "multiple",
+      "image": "nginx:1.25"
+    },
+    {
+      "name": "multiple2",
+      "image": "nginx:1.26"
+    }
+  ]
+}

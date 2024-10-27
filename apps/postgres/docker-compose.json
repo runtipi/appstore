@@ -1,0 +1,8 @@
+{
+  "services": [
+    {
+      "name": "postgres",
+      "image": "postgres:14"
+    }
+  ]
+}
