@@ -30,6 +30,10 @@
       "automerge": false
     },
     {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
       "matchPackageNames": [
         "mysql",
         "mariadb",
