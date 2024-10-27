@@ -3,7 +3,7 @@ import path from "path";
 
 const updateConfig = async (packageFile: string, newVersion: string) => {
   try {
-    const composePath = path.join(__dirname, packageFile);
+    const composePath = path.join(process.cwd(), packageFile);
     const configPath = path.join(path.dirname(composePath), "config.json");
 
     const config = JSON.parse(await fs.promises.readFile(configPath, "utf8"));
