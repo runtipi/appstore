@@ -23,7 +23,7 @@
     "commands": [
       "bun .github/scripts/update.ts {{packageFile}} {{newVersion}}"
     ],
-    "fileFilters": ["docker-compose.json"],
+    "fileFilters": ["apps/*/docker-compose.json"],
     "executionMode": "update"
   }
 }
