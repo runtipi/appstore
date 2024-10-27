@@ -16,13 +16,6 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "packagePatterns": [
-        "^([^\\/]+\\/)?(mysql|mariadb|mongodb|mongo|postgres|redis|clickhouse-server|clickhouse|nginx|couchdb|documentserver)(:|$)"
-      ],
-      "enabled": false
-    },
-    {
-      "matchDatasources": ["docker"],
       "automerge": false
     }
   ],
