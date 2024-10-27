@@ -6,7 +6,7 @@ on:
 jobs:
   renovate:
     runs-on: ubuntu-latest
-    if: ${{ github.event.issue.number == 17 }}
+    if: ${{ github.event_name == 'workflow_dispath' || github.event.issue.number == 17 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
