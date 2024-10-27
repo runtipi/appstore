@@ -25,5 +25,12 @@
       "matchDatasources": ["docker"],
       "automerge": false
     }
-  ]
+  ],
+  "postUpgradeTasks": {
+    "commands": [
+      "bun .github/scripts/update.ts {{packageFile}} {{newVersion}}"
+    ],
+    "fileFilters": ["docker-compose.json"],
+    "executionMode": "update"
+  }
 }
