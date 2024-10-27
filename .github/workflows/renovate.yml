@@ -1,10 +1,12 @@
 name: Renovate
 on:
   workflow_dispatch:
+  issues:
 
 jobs:
   renovate:
     runs-on: ubuntu-latest
+    if: ${{ github.event.issue.number == 17 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,4 +28,4 @@ jobs:
         run: echo ${{ github.repository }}
 
       - name: Run renovate
-        run: renovate --token ${{ secrets.RENOVATE_TOKEN }} ${{ github.repository }}
+        run: renovate --token ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
