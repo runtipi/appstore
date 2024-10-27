@@ -1,0 +1,8 @@
+{
+  "services": [
+    {
+      "name": "runtipi",
+      "image": "meienberger/runtipi:v2.0.6"
+    }
+  ]
+}
